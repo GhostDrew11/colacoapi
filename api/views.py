@@ -1,5 +1,5 @@
-from .models import Soda
-from .serializers import UserSerializer, SodaSerializer
+from .models import Order, Soda
+from .serializers import UserSerializer, SodaSerializer, OrderSerializer
 from rest_framework import viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
@@ -15,5 +15,9 @@ class UserViewSet(viewsets.ModelViewSet):
 class SodaViewSet(viewsets.ModelViewSet):
     queryset = Soda.objects.all()
     serializer_class = SodaSerializer
+
+class OrderViewSet(viewsets.ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
 
 

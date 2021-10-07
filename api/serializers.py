@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Soda
+from .models import Order, Soda
 from django.contrib.auth.models import User
 from rest_framework.authtoken.views import Token
 
@@ -21,3 +21,8 @@ class SodaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Soda
         fields = ['id','product_name','description','cost','quantity']
+
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = ['id', 'product_name', 'cost', 'quantity', 'card_number', 'security_code', 'expiration_date', 'zip_code']
