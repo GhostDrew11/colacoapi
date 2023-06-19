@@ -1,6 +1,6 @@
 # colacoapi
 
-Prototype django REST API for the colaco vending machine.
+Prototype django REST API for the colaco vending machine web application
 
 # Libraries used
 This API was bootstrapped with django, django restframework, postgreSQL, psycopg2, pillow, django-cors-headers
